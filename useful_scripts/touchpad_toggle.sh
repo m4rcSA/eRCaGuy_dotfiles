@@ -268,7 +268,7 @@ if [ "$newstate" = "OFF" ]; then
     # user must be using an external mouse
     echo "Turning TouchpadId $TouchpadId & TouchscreenId $TouchscreenId OFF."
 
-    imwheel -b "4 5" # turn on imwheel to help external mouse wheel scroll speed be better
+#    imwheel -b "4 5" # turn on imwheel to help external mouse wheel scroll speed be better
     disable_devices
     zenity --info --text "${PRINT_TEXT} DISABLED" --timeout=2
 elif [ "$newstate" = "ON" ]; then
@@ -276,7 +276,7 @@ elif [ "$newstate" = "ON" ]; then
     # scrolling, since user must be using the touchpad and/or touchscreen
     echo "Turning TouchpadId $TouchpadId & TouchscreenId $TouchscreenId ON."
 
-    killall imwheel # turn OFF imwheel to keep imwheel from interfering with proper track pad 
+#    killall imwheel # turn OFF imwheel to keep imwheel from interfering with proper track pad 
                     # scrolling
     enable_devices
     zenity --info --text "${PRINT_TEXT} ENABLED" --timeout=2
